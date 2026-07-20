@@ -1,0 +1,12 @@
+pandas
+numpy
+openpyxl
+sqlalchemy
+sqlite-utils
+pytest
+python-dotenv
+matplotlib
+seaborn
+requests
+jupyter
+ipykernel
