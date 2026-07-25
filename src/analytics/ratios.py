@@ -105,3 +105,56 @@ def return_on_assets(net_profit, total_assets):
         return None
 
     return (net_profit / total_assets) * 100
+
+def debt_to_equity(borrowings, equity_capital, reserves):
+    """
+    Debt-to-Equity Ratio
+    """
+
+    equity = equity_capital + reserves
+
+    if borrowings == 0:
+        return 0
+
+    if equity is None or equity <= 0:
+        return None
+
+    return borrowings / equity
+
+
+def interest_coverage_ratio(operating_profit, other_income, interest):
+    """
+    Interest Coverage Ratio
+    """
+
+    if interest is None or interest == 0:
+        return None
+
+    ebit = operating_profit + other_income
+
+    return ebit / interest
+
+
+def net_debt(borrowings, investments):
+    """
+    Net Debt
+    """
+
+    if borrowings is None:
+        borrowings = 0
+
+    if investments is None:
+        investments = 0
+
+    return borrowings - investments
+
+
+def asset_turnover(sales, total_assets):
+    """
+    Asset Turnover Ratio
+    """
+
+    if total_assets is None or total_assets == 0:
+        return None
+
+    return sales / total_assets
